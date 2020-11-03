@@ -1,0 +1,5 @@
+docker build -t centos8-salt centos8/
+
+
+# for a syndic setup
+docker-compose -f syndic-docker-compose.yml up

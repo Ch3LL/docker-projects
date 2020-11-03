@@ -1,0 +1,31 @@
+version: '2'
+services:
+  mom:
+    hostname: mom
+    command: salt-master -ldebug
+    build:
+      context: mom
+        #    volumes:
+        #      - /home/ch3ll/git/salt/:/salt-dev/
+    networks:
+      - salt
+  master:
+    hostname: syndic
+    command: bash -c "salt-master -d; salt-syndic -ldebug"
+    build:
+      context: syndic
+        #    volumes:
+        #      - /home/ch3ll/git/salt/:/salt-dev/
+    networks:
+      - salt
+  minion:
+    hostname: minion
+    command: salt-minion -ldebug
+    build:
+      context: minion/
+        #    volumes:
+        #      - /home/ch3ll/git/salt/:/salt-dev/
+    networks:
+      - salt
+networks:
+  salt:

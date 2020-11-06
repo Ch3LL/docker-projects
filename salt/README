@@ -1,4 +1,9 @@
-docker build -t centos8-salt centos8/
+# how to build images
+# todo: add ability to automatically build these images
+# todo: add tests
+sudo docker build -t centos8_salt centos8/
+sudo docker build -t gpg_pillar_salt gpg_pillar/
+sudo docker build -t file_tree_salt ext_pillar/file_tree/
 
 
 # for a syndic setup

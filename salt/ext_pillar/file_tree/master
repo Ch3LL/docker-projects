@@ -1,0 +1,7 @@
+log_level_logfile: debug
+ext_pillar:
+  - file_tree:
+      root_dir: /srv/pillar
+      follow_dir_links: False
+      keep_newline: False
+  - gpg: {}

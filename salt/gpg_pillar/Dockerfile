@@ -1,4 +1,4 @@
-FROM centos8-salt
+FROM centos8_salt
 
 
 RUN mkdir -p /etc/salt/gpgkeys
